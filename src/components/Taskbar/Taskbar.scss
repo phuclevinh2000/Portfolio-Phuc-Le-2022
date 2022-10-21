@@ -1,0 +1,116 @@
+@import '../../global.scss';
+
+.pf-bottom {
+  color: $--theme-ui-colors-mutedReverse;
+
+  .pf-connect-tool {
+    .pf-connect-tool-github,
+    .pf-connect-tool-linkedln,
+    .pf-connect-tool-facebook,
+    .pf-connect-tool-code {
+      position: absolute;
+      color: inherit;
+      bottom: 80px;
+      right: 15px;
+      border-radius: 50%;
+      background-color: $--theme-ui-colors-secondary;
+      box-shadow: rgb(0, 0, 0) 0px 0px 0px 0.5px inset;
+      border: 2px solid $--theme-ui-colors-shadow;
+      cursor: pointer;
+      z-index: 100;
+      transition: 0.5s;
+    }
+    .pf-connect-tool-github.active {
+      position: absolute;
+      right: 105px;
+      bottom: 67px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $--theme-ui-colors-secondary;
+      padding: 4px;
+      border: 2px solid $--theme-ui-colors-shadow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+    }
+    .pf-connect-tool-linkedln.active {
+      position: absolute;
+      right: 80px;
+      bottom: 105px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $--theme-ui-colors-secondary;
+      padding: 7px;
+      border: 2px solid $--theme-ui-colors-shadow;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .pf-connect-tool-facebook.active {
+      position: absolute;
+      right: 45px;
+      bottom: 135px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $--theme-ui-colors-secondary;
+      padding: 7px;
+      border: 2px solid $--theme-ui-colors-shadow;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .pf-connect-tool-code.active {
+      position: absolute;
+      right: 3px;
+      bottom: 155px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $--theme-ui-colors-secondary;
+      padding: 7px;
+      border: 2px solid $--theme-ui-colors-shadow;
+      cursor: pointer;
+      z-index: 100;
+    }
+  }
+
+  .pf-connect {
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: $--theme-ui-colors-secondary;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0.5px inset;
+    border: 2px solid $--theme-ui-colors-shadow;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .pf-taskbar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    bottom: 0px;
+    background-color: $--theme-ui-colors-secondary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding-left: 12px;
+    padding-right: 12px;
+    z-index: 1;
+    box-shadow: $--theme-ui-colors-shadow 0px 3px inset;
+
+    .pf-screw-setting-icon {
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      transition: 0.7s;
+    }
+
+    .pf-screw-setting-icon.active {
+      transform: rotate(180deg);
+    }
+  }
+}
