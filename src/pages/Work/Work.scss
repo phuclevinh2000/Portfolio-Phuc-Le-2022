@@ -1,0 +1,36 @@
+@import '../../global.scss';
+.pf-work {
+  z-index: 0;
+  height: 600px;
+  width: 855px;
+  background-color: $--theme-ui-colors-primary;
+  max-height: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgb(0 0 0) 0px 0px 0px 3px, rgb(0 0 0) 6px 4px 0px 2px;
+
+  .pf-work-header {
+    display: flex;
+    background-color: $--theme-ui-colors-secondary;
+    color: $--theme-ui-colors-text;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgb(0 0 0) 0px -2px inset;
+    font-weight: 600;
+
+    .pf-work-header-right {
+      background-color: $--theme-ui-colors-red;
+      border: 0px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: rgb(0 0 0) 0px 0px 0px 2.5px inset;
+    }
+  }
+}

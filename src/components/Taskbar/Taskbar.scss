@@ -18,15 +18,75 @@
     z-index: 1;
     box-shadow: $--theme-ui-colors-shadow 0px 3px inset;
 
-    .pf-screw-setting-icon {
-      height: 40px;
-      width: 40px;
-      cursor: pointer;
-      transition: 0.7s;
-    }
+    .pf-taskbar-left {
+      display: flex;
+      z-index: 100;
+      .pf-screw-setting-icon {
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        transition: 0.7s;
+      }
 
-    .pf-screw-setting-icon.active {
-      transform: rotate(180deg);
+      .pf-screw-setting-icon.active {
+        transform: rotate(180deg);
+      }
+
+      .pf-taskbar-openPage.active {
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        overflow: hidden;
+        margin-left: 12px;
+        padding-left: 24px;
+        padding-right: 24px;
+        background-color: rgb(233, 219, 186);
+        min-width: 160px;
+        cursor: default;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--theme-ui-colors-secondary);
+        height: 45px;
+        border-radius: 8px;
+        box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset;
+        font-weight: 600;
+        transition: 0.5s;
+
+        .pf-page-icon {
+          height: 32px;
+          padding-right: 10px;
+        }
+      }
+
+      .pf-taskbar-openPage {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        overflow: hidden;
+        margin-left: -312px;
+        padding-left: 24px;
+        padding-right: 24px;
+        background-color: rgb(233, 219, 186);
+        cursor: default;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--theme-ui-colors-secondary);
+        height: 45px;
+        border-radius: 8px;
+        box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset;
+        font-weight: 600;
+        transition: 0.5s;
+
+        .pf-page-icon {
+          height: 32px;
+          padding-right: 10px;
+        }
+      }
     }
   }
 }

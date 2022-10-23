@@ -7,9 +7,9 @@ export type Route = {
 
 const routes: Route[] = [
   { path: '/about', title: 'About Me', icon: 'home-about', code: 'about' },
-  { path: '/work', title: 'My Work', icon: 'home-edu', code: 'work' },
+  { path: '/work', title: 'My Work', icon: 'home-work', code: 'work' },
   { path: '/skills', title: 'Skills', icon: 'home-skills', code: 'skills' },
-  { path: '/hobby', title: 'Hobby', icon: 'home-work', code: 'hobby' },
+  { path: '/hobby', title: 'Hobby', icon: 'home-hobby', code: 'hobby' },
 ];
 
 export default routes;
