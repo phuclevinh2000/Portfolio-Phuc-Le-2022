@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
 import './Desktop.scss';
 
 type DesktopProps = {
-  children: ReactNode;
+  children: any;
 };
 
 const Desktop = ({ children }: DesktopProps) => {

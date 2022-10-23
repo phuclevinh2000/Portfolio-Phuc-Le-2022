@@ -1,0 +1,33 @@
+@import '../../global.scss';
+
+.pf-settingPanel.active {
+  position: absolute;
+  background-color: $--theme-ui-colors-primary;
+  box-sizing: border-box;
+  margin: 0px;
+  color: $--theme-ui-colors-mutedReverse;
+  border-radius: 6%;
+  box-shadow: rgb(0 0 0) 0px 0px 0px 3px inset, rgb(0 0 0) 4px 4px 0px;
+  z-index: 100;
+  left: 8px;
+  bottom: 72px;
+  width: 224px;
+  height: 100px;
+  transition: 0.4s;
+}
+
+.pf-settingPanel {
+  position: absolute;
+  background-color: $--theme-ui-colors-primary;
+  box-sizing: border-box;
+  margin: 0px;
+  color: $--theme-ui-colors-mutedReverse;
+  border-radius: 6%;
+  box-shadow: rgb(0 0 0) 0px 0px 0px 3px inset, rgb(0 0 0) 4px 4px 0px;
+  z-index: 100;
+  left: -300px;
+  bottom: 72px;
+  width: 224px;
+  height: 100px;
+  transition: 0.4s;
+}

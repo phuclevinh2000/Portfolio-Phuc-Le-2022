@@ -1,0 +1,16 @@
+.dashboard {
+  display: flex;
+}
+.dashboard-page {
+  width: 100vw;
+  // height: 100vh;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .dashboard {
+    grid-template-columns: auto 1fr;
+  }
+  .dashboard-page {
+    // width: 90%;
+  }
+}

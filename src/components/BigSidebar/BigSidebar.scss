@@ -1,0 +1,52 @@
+@import '../../global.scss';
+
+.pf-bigsidebar.active {
+  margin-left: 0px;
+  transition: 0.5s;
+}
+
+.pf-bigsidebar {
+  margin-left: -100px;
+
+  .pf-sidebar-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: $--theme-ui-colors-text;
+    width: 72px;
+    height: 72px;
+    border-radius: 8%;
+    box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset, rgb(0 0 0) 3px 3px 0px;
+    margin: 8px;
+    opacity: 1;
+    background-color: $--theme-ui-colors-secondary;
+    position: relative;
+
+    .pf-sidebar-selected {
+      width: 9px;
+      height: 9px;
+      background-color: $--theme-ui-colors-highlight;
+      border-radius: 50%;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 100;
+      box-shadow: rgb(0 0 0) 0px 0px 0px 2px;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .pf-sidebar-card-icon {
+      height: 37px;
+      // border-radius: 50%;
+    }
+  }
+
+  .pf-sidebar-card.active {
+    .pf-sidebar-selected {
+      opacity: 1;
+    }
+  }
+}
