@@ -23,6 +23,7 @@ const Home = () => {
         {!isOpenPageMenu &&
           routes.map((route) => (
             <NavLink
+              key={route.code}
               to={route.path}
               className='pf-main-card'
               onClick={() => dispatch(openClosePageMenu(true))}

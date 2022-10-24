@@ -15,6 +15,7 @@ const BigSidebar = () => {
     <div className={`pf-bigsidebar ${isOpenPageMenu && 'active'}`}>
       {routes.map((route) => (
         <NavLink
+          key={route.code}
           to={route.path}
           className={(navData: { isActive: any }) =>
             navData.isActive ? 'pf-sidebar-card active' : 'pf-sidebar-card'

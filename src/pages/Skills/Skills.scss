@@ -23,7 +23,7 @@
     box-shadow: rgb(0 0 0) 0px -2px inset;
     font-weight: 600;
 
-    .pf-skills-header-right {
+    .pf-skills-header-right-close-button {
       background-color: $--theme-ui-colors-red;
       border: 0px;
       width: 20px;
@@ -31,6 +31,86 @@
       cursor: pointer;
       border-radius: 50%;
       box-shadow: rgb(0 0 0) 0px 0px 0px 2.5px inset;
+    }
+    .pf-skills-header-right-fullscreen-button {
+      margin-right: 5px;
+      background-color: $--theme-ui-colors-green;
+      border: 0px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: rgb(0 0 0) 0px 0px 0px 2.5px inset;
+    }
+  }
+
+  .pf-skills-body {
+    padding: 20px;
+    overflow: auto;
+    flex: 1 1 0%;
+
+    .pf-skills-body-category {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .pf-skills-body-category-button {
+        background-color: $--theme-ui-colors-secondary;
+        border-radius: 6px;
+        padding: 0 20px;
+        height: 37px;
+        border: none;
+        margin-left: 8px;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    }
+
+    .pf-skills-body-toollist {
+      padding: 20px 20px 0px 20px;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 20%;
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          cursor: pointer;
+          display: flex;
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
+          text-decoration: none;
+          flex-direction: column;
+          -webkit-box-align: center;
+          align-items: center;
+          text-align: center;
+          color: $--theme-ui-colors-text;
+          font-weight: 600;
+
+          .pf-skills-body-toolPic {
+            height: 112px;
+            width: 112px;
+            position: relative;
+            background-color: rgba(227, 79, 38, 0.08);
+            padding: 24px;
+            margin-bottom: 4px;
+            box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset, rgb(0 0 0) 3px 3px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              height: 50px;
+              width: 50px;
+            }
+          }
+        }
+      }
     }
   }
 }
