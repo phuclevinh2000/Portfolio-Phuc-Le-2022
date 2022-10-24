@@ -6,6 +6,7 @@ import routes from '../../data/routes';
 import { openClosePageMenu } from '../../redux/setting/settingSlide';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -22,19 +23,21 @@ const Home = () => {
       <Desktop>
         {!isOpenPageMenu &&
           routes.map((route) => (
-            <NavLink
-              key={route.code}
-              to={route.path}
-              className='pf-main-card'
-              onClick={() => dispatch(openClosePageMenu(true))}
-            >
-              <img
-                className='pf-main-card-icon'
-                src={`./assets/icons/${route.icon}.svg`}
-                alt={route.title}
-              />
-              <p>{route.title}</p>
-            </NavLink>
+            <motion.div layoutId={route.path}>
+              <NavLink
+                key={route.code}
+                to={route.path}
+                className='pf-main-card'
+                onClick={() => dispatch(openClosePageMenu(true))}
+              >
+                <img
+                  className='pf-main-card-icon'
+                  src={`./assets/icons/${route.icon}.svg`}
+                  alt={route.title}
+                />
+                <p>{route.title}</p>
+              </NavLink>
+            </motion.div>
           ))}
       </Desktop>
     </main>

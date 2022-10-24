@@ -1,7 +1,7 @@
 @import '../../global.scss';
 .pf-skills {
   z-index: 0;
-  height: 600px;
+  height: 640px;
   width: 855px;
   background-color: $--theme-ui-colors-primary;
   max-height: calc(100% - 16px);
@@ -63,6 +63,10 @@
         margin-right: 8px;
         cursor: pointer;
       }
+
+      .pf-skills-body-category-button.active {
+        box-shadow: rgb(0 0 0) 0px 0px 0px 2px;
+      }
     }
 
     .pf-skills-body-toollist {
@@ -108,6 +112,14 @@
               height: 50px;
               width: 50px;
             }
+          }
+
+          .pf-skills-body-toolLabel {
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+            // font-size: 20px;
+            margin-top: 5px;
           }
         }
       }

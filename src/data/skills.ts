@@ -7,7 +7,7 @@ export type Skill = {
   code: string;
 };
 
-export const categories = ['Fundamentals', 'Libraries/Frameworks', 'Tools'];
+export const categories = ['Front-end', 'Back-end', 'Languages', 'Tools'];
 
 export const skills: Skill[] = [
   {
@@ -15,8 +15,8 @@ export const skills: Skill[] = [
     name: 'html',
     label: 'HTML',
     url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-    color: 'rgba(227, 79, 38, 0.08);',
-    category: 'Fundamentals',
+    color: 'rgba(227, 79, 38, 0.08)',
+    category: 'Languages',
   },
   {
     code: 'styledComponent',
@@ -24,7 +24,7 @@ export const skills: Skill[] = [
     label: 'Styled Component',
     url: 'https://styled-components.com/',
     color: 'rgba(227, 79, 38, 0.08)',
-    category: 'Fundamentals',
+    category: 'Front-end',
   },
   {
     code: 'css',
@@ -32,7 +32,7 @@ export const skills: Skill[] = [
     label: 'CSS',
     url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
     color: 'rgba(1, 112, 186, 0.08)',
-    category: 'Fundamentals',
+    category: 'Languages',
   },
   {
     code: 'js',
@@ -40,7 +40,7 @@ export const skills: Skill[] = [
     label: 'JavaScript',
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     color: 'rgba(255, 193, 7, 0.08)',
-    category: 'Fundamentals',
+    category: 'Languages',
   },
   {
     code: 'ts',
@@ -48,6 +48,7 @@ export const skills: Skill[] = [
     label: 'TypeScript',
     url: 'https://www.typescriptlang.org/',
     color: 'rgba(49, 120, 198, 0.08)',
+    category: 'Languages',
   },
   {
     code: 'reactjs',
@@ -55,7 +56,7 @@ export const skills: Skill[] = [
     label: 'ReactJS',
     url: 'https://reactjs.org/',
     color: 'rgba(0, 188, 212, 0.08)',
-    category: 'Libraries/Frameworks',
+    category: 'Front-end',
   },
   {
     code: 'nodejs',
@@ -63,7 +64,7 @@ export const skills: Skill[] = [
     label: 'NodeJS',
     url: 'https://nodejs.org/',
     color: 'rgba(140, 200, 75, 0.08)',
-    category: 'Fundamentals',
+    category: 'Back-end',
   },
   {
     code: 'bootstrap',
@@ -71,7 +72,7 @@ export const skills: Skill[] = [
     label: 'Bootstrap',
     url: 'https://getbootstrap.com/',
     color: 'rgba(86, 61, 124, 0.08)',
-    category: 'Libraries/Frameworks',
+    category: 'Front-end',
   },
   {
     code: 'sass',
@@ -79,7 +80,7 @@ export const skills: Skill[] = [
     label: 'Sass',
     url: 'https://sass-lang.com/',
     color: 'rgba(205, 103, 153, 0.08)',
-    category: 'Libraries/Frameworks',
+    category: 'Front-end',
   },
   {
     code: 'mongodb',
@@ -87,7 +88,7 @@ export const skills: Skill[] = [
     label: 'MongoDB',
     url: 'https://www.mongodb.com/',
     color: 'rgba(140, 200, 75, 0.08)',
-    category: 'Fundamentals',
+    category: 'Back-end',
   },
   {
     code: 'vscode',
@@ -127,6 +128,7 @@ export const skills: Skill[] = [
     label: 'Firebase',
     url: 'https://firebase.google.com/',
     color: 'rgba(255, 167, 20, 0.08)',
+    category: 'Back-end',
   },
   {
     code: 'git',
@@ -134,6 +136,7 @@ export const skills: Skill[] = [
     label: 'Git',
     url: 'https://git-scm.com/',
     color: 'rgba(240, 81, 51, 0.08)',
+    category: 'Tools',
   },
   {
     code: 'github',
@@ -141,6 +144,7 @@ export const skills: Skill[] = [
     label: 'Github',
     url: 'http://github.com/',
     color: 'rgba(0, 0, 0, 0.08)',
+    category: 'Tools',
   },
   {
     code: 'gitlab',
@@ -148,6 +152,7 @@ export const skills: Skill[] = [
     label: 'Gitlab',
     url: 'https://about.gitlab.com/',
     color: 'rgba(0, 0, 0, 0.08)',
+    category: 'Tools',
   },
 ];
 
