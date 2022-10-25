@@ -19,8 +19,6 @@ const Work = () => {
   const selectedPageData = routes.find((route) => route.path === pathname);
   const [selectingWork, setSelectingWork] = useState<any>({});
 
-  console.log(selectingWork.mainTask);
-
   const handleSelectingWork = (job: careerType | sideProject) => {
     setSelectingWork(job);
   };
@@ -137,7 +135,7 @@ const Work = () => {
                 <p className='pf-work-description'>
                   {selectingWork.description}
                 </p>
-                <p className='pf-work-aboutme'>{selectingWork.description}</p>
+
                 <p style={{ marginBottom: '8px', marginTop: '16px' }}>
                   My main activities include:
                 </p>

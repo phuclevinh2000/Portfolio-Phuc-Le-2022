@@ -1,19 +1,25 @@
 import './Skills.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { openClosePageMenu } from '../../redux/setting/settingSlide';
 import { useDispatch } from 'react-redux';
 import routes from '../../data/routes';
 import { NavLink, useLocation } from 'react-router-dom';
 import { categories, skills } from '../../data/skills';
 import { motion, AnimatePresence } from 'framer-motion';
+import useOnClickOutside from '../../customHook/useOnClickOutSide';
 
 const Skills = () => {
+  const ref = useRef();
   const dispatch = useDispatch();
   const location = useLocation();
   const { pathname } = location;
   const selectedPageData = routes.find((route) => route.path === pathname);
   const [fullscreen, setFullscreen] = useState(false);
   const [filters, setFilters] = useState<string[]>([]);
+  const [question, setQuestion] = useState(false);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useOnClickOutside(ref, () => setQuestion(false));
 
   const handleSetFilterClick = (option: string) => {
     // Check if the filter option has been in the array yet, if not then add, if already exist then clear the filter option.
@@ -66,6 +72,27 @@ const Skills = () => {
             {selectedPageData?.title}
           </motion.div>
           <motion.div className='pf-skills-header-right'>
+            <AnimatePresence>
+              {question && (
+                <motion.div
+                  // @ts-ignore
+                  // ref={ref}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className='pf-skills-header-right-note'
+                >
+                  This is a non-exhaustive list of technical stuffs that I
+                  pretend to know, either by having used them in work or in my
+                  side projects, of any scale.
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <motion.button
+              onClick={() => setQuestion(!question)}
+              className='pf-skills-header-right-question-button'
+            ></motion.button>
             <motion.button
               onClick={fullscreenHandler}
               className='pf-skills-header-right-fullscreen-button'

@@ -7,6 +7,7 @@ import Work from './pages/Work/Work';
 import Skills from './pages/Skills/Skills';
 import Hobby from './pages/Hobby/Hobby';
 import Taskbar from './components/Taskbar/Taskbar';
+import Error from './pages/Error/Error';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/skills' element={<Skills />} />
           <Route path='/hobby' element={<Hobby />} />
         </Route>
+        <Route path='*' element={<Error />} />
       </Routes>
       <Taskbar />
     </BrowserRouter>

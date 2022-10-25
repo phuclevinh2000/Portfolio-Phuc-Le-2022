@@ -1,0 +1,23 @@
+@import '../../global.scss';
+
+.full-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 600px;
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .link {
+    color: $--theme-ui-colors-text;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 6%;
+    box-shadow: rgb(0 0 0) 0px 0px 0px 2.5px inset;
+    padding: 10px;
+  }
+}

@@ -2,14 +2,12 @@ import './BigSidebar.scss';
 import { RootState } from '../../redux/store';
 import { useSelector } from 'react-redux';
 import routes from '../../data/routes';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const BigSidebar = () => {
   const isOpenPageMenu = useSelector(
     (state: RootState) => state.setting.isOpeningPageMenu
   );
-
-  // const location = useLocation();
 
   return (
     <div className={`pf-bigsidebar ${isOpenPageMenu && 'active'}`}>

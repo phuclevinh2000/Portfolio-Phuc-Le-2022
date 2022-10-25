@@ -21,6 +21,7 @@ const Taskbar = () => {
   const location = useLocation();
   const { pathname } = location;
   const selectedPageData = routes.find((route) => route.path === pathname);
+  console.log(pathname);
 
   const sringAnimation = {
     type: 'spring',
@@ -36,27 +37,40 @@ const Taskbar = () => {
 
       <motion.div className='pf-taskbar'>
         <motion.div className='pf-taskbar-left'>
-          <motion.img
-            onClick={handleOpenSetting}
-            className={`pf-screw-setting-icon ${isOpenSetting && 'active'}`}
-            src='./assets/icons/screws-setting.svg'
-            alt='setting'
-          />
-          <motion.div
-            className={`pf-taskbar-openPage ${pathname !== '/' && 'active'}`}
-          >
+          {(pathname === '/' ||
+            pathname === '/work' ||
+            pathname === '/skills' ||
+            pathname === '/hobby' ||
+            pathname === '/about') && (
             <motion.img
-              layout
-              transition={sringAnimation}
               onClick={handleOpenSetting}
-              className={`pf-page-icon`}
-              src={`./assets/icons/home-${
-                pathname !== '/' ? pathname.substring(1) : 'about'
-              }.svg`}
+              className={`pf-screw-setting-icon ${isOpenSetting && 'active'}`}
+              src='./assets/icons/screws-setting.svg'
               alt='setting'
             />
-            <motion.p>{selectedPageData?.title}</motion.p>
-          </motion.div>
+          )}
+
+          {(pathname === '/' ||
+            pathname === '/work' ||
+            pathname === '/skills' ||
+            pathname === '/hobby' ||
+            pathname === '/about') && (
+            <motion.div
+              className={`pf-taskbar-openPage ${pathname !== '/' && 'active'}`}
+            >
+              <motion.img
+                layout
+                transition={sringAnimation}
+                onClick={handleOpenSetting}
+                className={`pf-page-icon`}
+                src={`./assets/icons/home-${
+                  pathname !== '/' ? pathname.substring(1) : 'about'
+                }.svg`}
+                alt='setting'
+              />
+              <motion.p>{selectedPageData?.title}</motion.p>
+            </motion.div>
+          )}
         </motion.div>
         <motion.p>Made by Phuc Le in 2022</motion.p>
       </motion.div>

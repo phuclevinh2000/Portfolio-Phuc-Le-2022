@@ -22,6 +22,24 @@
     justify-content: space-between;
     box-shadow: rgb(0 0 0) 0px -2px inset;
     font-weight: 600;
+    position: relative;
+
+    .pf-skills-header-right-note {
+      position: absolute;
+      box-sizing: border-box;
+      margin: 0px;
+      min-width: 0px;
+      position: absolute;
+      top: 35px;
+      right: 65px;
+      width: 250px;
+      padding: 16px;
+      background-color: $--theme-ui-colors-primary;
+      color: $--theme-ui-colors-text;
+      box-shadow: rgb(0 0 0) 0px 0px 0px 2px, rgb(0 0 0) 4px 4px 0px 2px;
+      z-index: 1000;
+      border-radius: 10px;
+    }
 
     .pf-skills-header-right-close-button {
       background-color: $--theme-ui-colors-red;
@@ -35,6 +53,16 @@
     .pf-skills-header-right-fullscreen-button {
       margin-right: 5px;
       background-color: $--theme-ui-colors-green;
+      border: 0px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: rgb(0 0 0) 0px 0px 0px 2.5px inset;
+    }
+    .pf-skills-header-right-question-button {
+      margin-right: 5px;
+      background-color: $--theme-ui-colors-yellow-question;
       border: 0px;
       width: 20px;
       height: 20px;
