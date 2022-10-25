@@ -44,62 +44,62 @@ const AboutMe = () => {
   }, [dispatch]);
   return (
     <AnimatePresence>
-      <motion.div layoutId={selectedPageData?.path} className={`pf-aboutme`}>
-        <div className='pf-aboutme-header'>
-          <div className='pf-aboutme-header-left'>
+      <motion.div layoutId={selectedPageData?.path} className='pf-aboutme'>
+        <motion.div className='pf-aboutme-header'>
+          <motion.div className='pf-aboutme-header-left'>
             {selectedPageData?.title}
-          </div>
-          <div className='pf-aboutme-header-right'>
-            <button
+          </motion.div>
+          <motion.div className='pf-aboutme-header-right'>
+            <motion.button
               onClick={fullscreenHandler}
               className='pf-aboutme-header-right-fullscreen-button'
-            ></button>
+            ></motion.button>
             <NavLink to='/'>
               <button className='pf-aboutme-header-right-close-button'></button>
             </NavLink>
-          </div>
-        </div>
-        <div className='pf-aboutme-content'>
-          <div className='pf-aboutme-content-left'>
-            <img
+          </motion.div>
+        </motion.div>
+        <motion.div className='pf-aboutme-content'>
+          <motion.div className='pf-aboutme-content-left'>
+            <motion.img
               className='pf-profile-pic'
               src={`./assets/icons/profile-pic.jpg`}
               alt='profile picuture'
             />
             <CVAndEmail />
-          </div>
-          <div className='pf-aboutme-content-right'>
-            <div className='pf-aboutme-content-right-header'>
-              <h2 className='pf-aboutme-content-right-title'>
+          </motion.div>
+          <motion.div className='pf-aboutme-content-right'>
+            <motion.div className='pf-aboutme-content-right-header'>
+              <motion.h2 className='pf-aboutme-content-right-title'>
                 Hello, I'm <span className='pf-aboutme-name'>Phuc</span>
-              </h2>
-              <p className='pf-aboutme-content-right-role'>
+              </motion.h2>
+              <motion.p className='pf-aboutme-content-right-role'>
                 {aboutMeData.role}
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
-            <p className='pf-aboutme-content-right-description'>
+            <motion.p className='pf-aboutme-content-right-description'>
               {aboutMeData.description}
-            </p>
+            </motion.p>
 
-            <div className='pf-aboutme-content-right-facts-and-trivias'>
-              <div className='pf-aboutme-link'>
+            <motion.div className='pf-aboutme-content-right-facts-and-trivias'>
+              <motion.div className='pf-aboutme-link'>
                 <NavLink to='/work'>
-                  <h5>
+                  <motion.h5>
                     Explore <span>my work</span>
-                  </h5>
+                  </motion.h5>
                 </NavLink>
-              </div>
-              <div className='pf-aboutme-link'>
+              </motion.div>
+              <motion.div className='pf-aboutme-link'>
                 <NavLink to='/skills'>
                   <h5>
                     Know more about <span>my skills</span>
                   </h5>
                 </NavLink>
-              </div>
-            </div>
-          </div>
-        </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </AnimatePresence>
   );

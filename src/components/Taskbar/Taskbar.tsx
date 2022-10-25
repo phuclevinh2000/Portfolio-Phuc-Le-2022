@@ -6,6 +6,7 @@ import ConnectTool from '../ConnectTool/ConnectTool';
 import SettingPanel from '../SettingPanel/SettingPanel';
 import { useLocation } from 'react-router-dom';
 import routes from '../../data/routes';
+import { motion } from 'framer-motion';
 
 const Taskbar = () => {
   const isOpenSetting = useSelector(
@@ -21,24 +22,32 @@ const Taskbar = () => {
   const { pathname } = location;
   const selectedPageData = routes.find((route) => route.path === pathname);
 
+  const sringAnimation = {
+    type: 'spring',
+    stiffness: 700,
+    damping: 30,
+  };
+
   return (
-    <div className='pf-bottom'>
+    <motion.div className='pf-bottom'>
       <ConnectTool />
 
       <SettingPanel />
 
-      <div className='pf-taskbar'>
-        <div className='pf-taskbar-left'>
-          <img
+      <motion.div className='pf-taskbar'>
+        <motion.div className='pf-taskbar-left'>
+          <motion.img
             onClick={handleOpenSetting}
             className={`pf-screw-setting-icon ${isOpenSetting && 'active'}`}
             src='./assets/icons/screws-setting.svg'
             alt='setting'
           />
-          <div
+          <motion.div
             className={`pf-taskbar-openPage ${pathname !== '/' && 'active'}`}
           >
-            <img
+            <motion.img
+              layout
+              transition={sringAnimation}
               onClick={handleOpenSetting}
               className={`pf-page-icon`}
               src={`./assets/icons/home-${
@@ -46,12 +55,12 @@ const Taskbar = () => {
               }.svg`}
               alt='setting'
             />
-            <p>{selectedPageData?.title}</p>
-          </div>
-        </div>
-        <p>Made by Phuc Le in 2022</p>
-      </div>
-    </div>
+            <motion.p>{selectedPageData?.title}</motion.p>
+          </motion.div>
+        </motion.div>
+        <motion.p>Made by Phuc Le in 2022</motion.p>
+      </motion.div>
+    </motion.div>
   );
 };
 

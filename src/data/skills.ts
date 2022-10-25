@@ -19,14 +19,6 @@ export const skills: Skill[] = [
     category: 'Languages',
   },
   {
-    code: 'styledComponent',
-    name: 'Styled Component',
-    label: 'Styled Component',
-    url: 'https://styled-components.com/',
-    color: 'rgba(227, 79, 38, 0.08)',
-    category: 'Front-end',
-  },
-  {
     code: 'css',
     name: 'css',
     label: 'CSS',
@@ -59,6 +51,14 @@ export const skills: Skill[] = [
     category: 'Front-end',
   },
   {
+    code: 'redux',
+    name: 'redux',
+    label: 'Redux',
+    url: 'https://redux.js.org/',
+    color: 'rgba(86, 61, 124, 0.08)',
+    category: 'Front-end',
+  },
+  {
     code: 'nodejs',
     name: 'nodejs',
     label: 'NodeJS',
@@ -80,6 +80,15 @@ export const skills: Skill[] = [
     label: 'Sass',
     url: 'https://sass-lang.com/',
     color: 'rgba(205, 103, 153, 0.08)',
+    category: 'Front-end',
+  },
+
+  {
+    code: 'styledComponent',
+    name: 'Styled Component',
+    label: 'Styled Component',
+    url: 'https://styled-components.com/',
+    color: 'rgba(227, 79, 38, 0.08)',
     category: 'Front-end',
   },
   {

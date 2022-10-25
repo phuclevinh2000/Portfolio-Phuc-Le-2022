@@ -23,9 +23,8 @@ const Home = () => {
       <Desktop>
         {!isOpenPageMenu &&
           routes.map((route) => (
-            <motion.div layoutId={route.path}>
+            <motion.div key={route.code} layoutId={route.path}>
               <NavLink
-                key={route.code}
                 to={route.path}
                 className='pf-main-card'
                 onClick={() => dispatch(openClosePageMenu(true))}

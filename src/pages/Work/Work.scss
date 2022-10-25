@@ -23,7 +23,7 @@
     box-shadow: rgb(0 0 0) 0px -2px inset;
     font-weight: 600;
 
-    .pf-work-header-right {
+    .pf-work-header-right-close-button {
       background-color: $--theme-ui-colors-red;
       border: 0px;
       width: 20px;
@@ -31,6 +31,165 @@
       cursor: pointer;
       border-radius: 50%;
       box-shadow: rgb(0 0 0) 0px 0px 0px 2.5px inset;
+    }
+
+    .pf-work-header-right-fullscreen-button {
+      margin-right: 5px;
+      background-color: $--theme-ui-colors-green;
+      border: 0px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: rgb(0 0 0) 0px 0px 0px 2.5px inset;
+    }
+  }
+
+  .pf-work-body {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    overflow: auto;
+
+    .pf-work-body-left {
+      width: 35%;
+
+      .pf-work-body-left-title {
+        box-sizing: border-box;
+        margin: 0px 0px 12px;
+        min-width: 0px;
+        font-family: inherit;
+        color: $--theme-ui-colors-text;
+        font-variant: small-caps;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .pf-work-body-left-folder {
+        cursor: pointer;
+        text-decoration: none;
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+
+        .pf-folder {
+          padding: 7px;
+          cursor: pointer;
+
+          button {
+            display: flex;
+            align-items: center;
+            background-color: $--theme-ui-colors-primary;
+            border: none;
+            margin-left: -5px;
+            cursor: pointer;
+          }
+          p {
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 15px;
+            font-weight: 500;
+          }
+        }
+
+        .pf-folder.active {
+          cursor: pointer;
+          background-color: $--theme-ui-colors-secondary;
+          border-radius: 6px;
+          box-shadow: rgb(0 0 0) 0px 0px 0px 2px inset;
+
+          button {
+            background-color: $--theme-ui-colors-secondary;
+          }
+        }
+      }
+    }
+
+    .pf-work-body-right {
+      width: 60%;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      display: flex;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      font-weight: 400;
+      font-size: 15px;
+
+      .pf-work-body-right-title {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        font-family: inherit;
+        font-size: 25px;
+      }
+
+      .pf-work-aboutme {
+        margin-bottom: 16px;
+      }
+
+      .pf-work-time {
+        box-sizing: border-box;
+        margin: 0px 0px 24px;
+        min-width: 0px;
+        color: $--theme-ui-colors-muted;
+      }
+
+      .pf-work-list {
+        margin-left: 18px;
+        margin-bottom: 16px;
+        li {
+          list-style-type: disc;
+        }
+      }
+
+      .pf-work-description {
+        margin-bottom: 24px;
+        font-style: italic;
+      }
+
+      .pf-work-body-right-empty {
+        margin: 0;
+        min-width: 0;
+        color: $--theme-ui-colors-muted;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .pf-work-demo-and-source {
+        display: flex;
+        /* CSS */
+        .pf-work-demo {
+          font-size: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          list-style: initial;
+          margin: 10px 15px 0 0;
+          border-radius: 8px;
+          background-color: #f3ebd9;
+          padding: 10px;
+          text-decoration: none;
+          color: $--theme-ui-colors-mutedReverse;
+          box-shadow: rgb(0 0 0) 0px 0px 0px 1.5px inset;
+        }
+
+        @media (min-width: 768px) {
+          .button-54 {
+            padding: 0.25em 0.75em;
+          }
+        }
+      }
+    }
+
+    .pf-work-body-right.empty {
+      display: flex;
+      justify-content: center;
     }
   }
 }

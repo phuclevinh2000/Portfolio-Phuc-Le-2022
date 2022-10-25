@@ -61,22 +61,24 @@ const Skills = () => {
   return (
     <AnimatePresence>
       <motion.div layoutId={selectedPageData?.path} className='pf-skills'>
-        <div className='pf-skills-header'>
-          <div className='pf-skills-header-left'>{selectedPageData?.title}</div>
-          <div className='pf-skills-header-right'>
-            <button
+        <motion.div className='pf-skills-header'>
+          <motion.div className='pf-skills-header-left'>
+            {selectedPageData?.title}
+          </motion.div>
+          <motion.div className='pf-skills-header-right'>
+            <motion.button
               onClick={fullscreenHandler}
               className='pf-skills-header-right-fullscreen-button'
-            ></button>
+            ></motion.button>
             <NavLink to='/'>
-              <button className='pf-skills-header-right-close-button'></button>
+              <motion.button className='pf-skills-header-right-close-button'></motion.button>
             </NavLink>
-          </div>
-        </div>
-        <div className='pf-skills-body'>
-          <div className='pf-skills-body-category'>
+          </motion.div>
+        </motion.div>
+        <motion.div className='pf-skills-body'>
+          <motion.div className='pf-skills-body-category'>
             {categories.map((category) => (
-              <button
+              <motion.button
                 onClick={() => handleSetFilterClick(category)}
                 className={`pf-skills-body-category-button ${
                   filters.find((filter) => filter === category) && 'active'
@@ -84,10 +86,10 @@ const Skills = () => {
                 key={category}
               >
                 {category}
-              </button>
+              </motion.button>
             ))}
-          </div>
-          <ul className='pf-skills-body-toollist'>
+          </motion.div>
+          <motion.ul className='pf-skills-body-toollist'>
             {filteredSkills.map((skill) => (
               <motion.li
                 animate={{ opacity: 1 }}
@@ -96,25 +98,25 @@ const Skills = () => {
                 layout
                 key={skill.code}
               >
-                <a href={skill.url} target='_blank' rel='noreferrer'>
-                  <div
+                <motion.a href={skill.url} target='_blank' rel='noreferrer'>
+                  <motion.div
                     className='pf-skills-body-toolPic'
                     style={{ backgroundColor: `${skill.color}` }}
                   >
-                    <img
+                    <motion.img
                       src={`./assets/icons/skills-${skill.code}.svg`}
                       alt={skill.name}
                     />
-                  </div>
+                  </motion.div>
 
-                  <span className='pf-skills-body-toolLabel'>
+                  <motion.span className='pf-skills-body-toolLabel'>
                     {skill.label}
-                  </span>
-                </a>
+                  </motion.span>
+                </motion.a>
               </motion.li>
             ))}
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       </motion.div>
     </AnimatePresence>
   );
