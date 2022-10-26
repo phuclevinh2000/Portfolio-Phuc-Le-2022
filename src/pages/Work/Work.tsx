@@ -99,7 +99,7 @@ const Work = () => {
                   style={{ paddingTop: '20px' }}
                   className='pf-work-body-left-title'
                 >
-                  Side Works
+                  Recent Side Works
                 </h3>
                 {workAndProject.sideProject.map((project) => (
                   <li
