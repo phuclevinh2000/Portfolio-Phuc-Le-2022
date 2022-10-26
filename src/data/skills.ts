@@ -59,6 +59,14 @@ export const skills: Skill[] = [
     category: 'Front-end',
   },
   {
+    code: 'jest',
+    name: 'jest',
+    label: 'Jest',
+    url: 'https://jestjs.io/',
+    color: 'rgba(86, 61, 124, 0.08)',
+    category: 'Front-end',
+  },
+  {
     code: 'nodejs',
     name: 'nodejs',
     label: 'NodeJS',
