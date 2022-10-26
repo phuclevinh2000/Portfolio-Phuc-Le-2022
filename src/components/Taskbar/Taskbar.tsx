@@ -72,7 +72,7 @@ const Taskbar = () => {
             </motion.div>
           )}
         </motion.div>
-        <motion.p>Made by Phuc Le in 2022</motion.p>
+        <motion.p>Phuc Le, 2022</motion.p>
       </motion.div>
     </motion.div>
   );

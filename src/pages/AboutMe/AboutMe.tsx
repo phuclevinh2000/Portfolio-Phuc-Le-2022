@@ -92,9 +92,9 @@ const AboutMe = () => {
               </motion.div>
               <motion.div className='pf-aboutme-link'>
                 <NavLink to='/skills'>
-                  <h5>
+                  <motion.h5>
                     Know more about <span>my skills</span>
-                  </h5>
+                  </motion.h5>
                 </NavLink>
               </motion.div>
             </motion.div>

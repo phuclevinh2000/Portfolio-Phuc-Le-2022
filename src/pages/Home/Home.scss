@@ -13,8 +13,8 @@
     .pf-main-card {
       height: 160px;
       width: 160px;
-      top: 50%;
-      left: 50%;
+      // top: 50%;
+      // left: 50%;
       background-color: $--theme-ui-colors-secondary;
       color: $--theme-ui-colors-text;
       border: 1px solid black;
@@ -35,6 +35,16 @@
 
       &:hover {
         transform: scale(0.9);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .pf-desktop {
+      flex-direction: column;
+
+      div {
+        margin: 7px 0;
       }
     }
   }

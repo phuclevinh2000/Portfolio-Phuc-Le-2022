@@ -107,7 +107,6 @@
     }
 
     .pf-hobby-body-right {
-      width: 60%;
       padding-left: 24px;
       padding-right: 24px;
       padding-top: 16px;
@@ -134,6 +133,15 @@
       font-style: italic;
     }
 
+    .pf-hobby-picture {
+      img {
+        height: 250px;
+        width: 450px;
+        border-radius: 4%;
+        box-shadow: rgb(0 0 0) 0px 0px 0px 1px;
+      }
+    }
+
     .pf-hobby-body-right-empty {
       margin: 0;
       min-width: 0;
@@ -145,6 +153,49 @@
     .pf-hobby-body-right.empty {
       display: flex;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pf-hobby {
+    height: 650px;
+    width: 360px;
+    .pf-hobby-body {
+      display: flex;
+      flex-direction: column;
+
+      .pf-hobby-body-left {
+        width: 100%;
+        .pf-hobby-body-left-folder {
+          display: flex;
+
+          .pf-hobby-body-left-title {
+            margin: 0;
+          }
+        }
+      }
+
+      .pf-hobby-body-right {
+        padding: 0;
+        display: flex;
+        // -webkit-flex: 1;
+        // -ms-flex: 1;
+        // flex: 1;
+        font-weight: 400;
+        font-size: 15px;
+
+        div {
+          .pf-hobby-picture {
+            img {
+              height: 250px;
+              width: 320px;
+              border-radius: 4%;
+              box-shadow: rgb(0 0 0) 0px 0px 0px 1px;
+            }
+          }
+        }
+      }
     }
   }
 }

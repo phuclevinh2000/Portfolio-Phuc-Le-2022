@@ -19,7 +19,7 @@
     cursor: pointer;
     position: relative;
     -webkit-box-align: center;
-    min-width: 150px;
+    width: 150px;
     transition: all 0.5s ease 0s;
 
     .pf-cvAndEmail-title {
@@ -28,6 +28,28 @@
 
     &:hover {
       background-color: $--theme-ui-colors-secondary;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pf-cvAndEmail {
+    display: flex;
+    a {
+      width: 115px;
+      margin: 0 4px;
+
+      .pf-cvAndEmail-title {
+        // display: none;
+        font-size: 15px;
+        padding: 12px 0px;
+        margin-left: -5px;
+      }
+
+      .pf-cvAndEmail-icon {
+        border: none;
+        align-self: center;
+      }
     }
   }
 }

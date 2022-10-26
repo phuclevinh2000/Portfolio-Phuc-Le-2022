@@ -141,3 +141,41 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .pf-aboutme {
+    height: 650px;
+    width: 360px;
+    max-height: calc(100% - 16px);
+
+    .pf-aboutme-content {
+      display: flex;
+      flex-direction: column;
+
+      .pf-aboutme-content-right-description {
+        font-size: 20px;
+      }
+
+      .pf-aboutme-content-right-facts-and-trivias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .pf-aboutme-link {
+          margin: 5px 0;
+          width: 250px;
+
+          &:nth-child(2) {
+            margin-left: 0;
+          }
+          a {
+            h5 {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

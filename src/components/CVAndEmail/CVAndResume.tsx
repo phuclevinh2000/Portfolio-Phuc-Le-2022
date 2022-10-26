@@ -13,7 +13,7 @@ const CVAndEmail = () => {
           src={`./assets/icons/cv-icon.svg`}
           alt='cv'
         />
-        <span className='pf-cvAndEmail-title'>Resume</span>
+        <span className='pf-cvAndEmail-title'>CV</span>
       </a>
       <a href='mailto:phuclevinh2000@gmail.com'>
         <img

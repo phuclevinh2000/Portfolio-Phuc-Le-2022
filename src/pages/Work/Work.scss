@@ -107,7 +107,6 @@
     }
 
     .pf-work-body-right {
-      width: 60%;
       padding-left: 24px;
       padding-right: 24px;
       padding-top: 16px;
@@ -190,6 +189,33 @@
     .pf-work-body-right.empty {
       display: flex;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pf-work {
+    height: 650px;
+    width: 360px;
+    .pf-work-body {
+      display: flex;
+      flex-direction: column;
+
+      .pf-work-body-left {
+        width: 100%;
+        .pf-work-body-left-folder {
+          display: flex;
+
+          .pf-work-body-left-title {
+            margin: 0;
+          }
+        }
+      }
+
+      .pf-work-body-right {
+        padding: 10px 0;
+        display: flex;
+      }
     }
   }
 }

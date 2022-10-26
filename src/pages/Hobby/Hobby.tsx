@@ -104,6 +104,14 @@ const Hobby = () => {
                 <p className='pf-hobby-description'>
                   {selectingHobby.description}
                 </p>
+                {selectingHobby.picture && (
+                  <p className='pf-hobby-picture'>
+                    <motion.img
+                      src={`./assets/icons/${selectingHobby.picture}`}
+                      alt={selectingHobby.name}
+                    />
+                  </p>
+                )}
               </div>
             )}
           </div>

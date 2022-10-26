@@ -154,3 +154,45 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .pf-skills {
+    height: 650px;
+    width: 360px;
+
+    .pf-skills-body {
+      .pf-skills-body-category {
+        .pf-skills-body-category-button {
+          background-color: $--theme-ui-colors-secondary;
+          border-radius: 6px;
+          padding: 0 5px;
+          height: 30px;
+          border: none;
+          margin-left: 8px;
+          margin-right: 8px;
+          cursor: pointer;
+        }
+      }
+
+      .pf-skills-body-toollist {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 33%;
+
+          a {
+            .pf-skills-body-toolPic {
+              height: 80px;
+              width: 80px;
+
+              img {
+                height: 35px;
+                width: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

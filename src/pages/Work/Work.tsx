@@ -67,57 +67,63 @@ const Work = () => {
           </motion.div>
         </motion.div>
         <motion.div className='pf-work-body'>
-          <div className='pf-work-body-left'>
-            <motion.h3 className='pf-work-body-left-title'>Careers</motion.h3>
+          <motion.div className='pf-work-body-left'>
             <motion.ul className='pf-work-body-left-folder'>
-              {workAndProject.careers.map((job) => (
-                <motion.li
-                  className={`pf-folder ${
-                    selectingWork.id === job.id && 'active'
-                  }`}
-                  key={job.id}
-                  onClick={() => handleSelectingWork(job)}
-                >
-                  <motion.button className='pf-work-body-folder-button'>
-                    <motion.img
-                      src={`./assets/icons/workFolder-${
-                        selectingWork.id === job.id ? 'open' : 'close'
-                      }.svg`}
-                      alt='Folder Icon'
-                    />
-                    <motion.p>{job.name}</motion.p>
-                  </motion.button>
-                </motion.li>
-              ))}
+              <div className='pf-career'>
+                <motion.h3 className='pf-work-body-left-title'>
+                  Careers
+                </motion.h3>
+                {workAndProject.careers.map((job) => (
+                  <motion.li
+                    className={`pf-folder ${
+                      selectingWork.id === job.id && 'active'
+                    }`}
+                    key={job.id}
+                    onClick={() => handleSelectingWork(job)}
+                  >
+                    <motion.button className='pf-work-body-folder-button'>
+                      <motion.img
+                        src={`./assets/icons/workFolder-${
+                          selectingWork.id === job.id ? 'open' : 'close'
+                        }.svg`}
+                        alt='Folder Icon'
+                      />
+                      <motion.p>{job.name}</motion.p>
+                    </motion.button>
+                  </motion.li>
+                ))}
+              </div>
 
-              <h3
-                style={{ paddingTop: '20px' }}
-                className='pf-work-body-left-title'
-              >
-                Side Works
-              </h3>
-              {workAndProject.sideProject.map((project) => (
-                <li
-                  className={`pf-folder ${
-                    selectingWork.id === project.id && 'active'
-                  }`}
-                  key={project.id}
-                  onClick={() => handleSelectingWork(project)}
+              <div className='pf-sidework'>
+                <h3
+                  style={{ paddingTop: '20px' }}
+                  className='pf-work-body-left-title'
                 >
-                  <button className='pf-work-body-folder-button'>
-                    <img
-                      src={`./assets/icons/workFolder-${
-                        selectingWork.id === project.id ? 'open' : 'close'
-                      }.svg`}
-                      alt='Folder Icon'
-                    />
-                    <p>{project.name}</p>
-                  </button>
-                </li>
-              ))}
+                  Side Works
+                </h3>
+                {workAndProject.sideProject.map((project) => (
+                  <li
+                    className={`pf-folder ${
+                      selectingWork.id === project.id && 'active'
+                    }`}
+                    key={project.id}
+                    onClick={() => handleSelectingWork(project)}
+                  >
+                    <button className='pf-work-body-folder-button'>
+                      <img
+                        src={`./assets/icons/workFolder-${
+                          selectingWork.id === project.id ? 'open' : 'close'
+                        }.svg`}
+                        alt='Folder Icon'
+                      />
+                      <p>{project.name}</p>
+                    </button>
+                  </li>
+                ))}
+              </div>
             </motion.ul>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             className={`pf-work-body-right ${
               Object.keys(selectingWork).length === 0 && 'empty'
             }`}
@@ -172,7 +178,7 @@ const Work = () => {
                 </div>
               </div>
             )}
-          </div>
+          </motion.div>
         </motion.div>
       </motion.div>
     </AnimatePresence>
