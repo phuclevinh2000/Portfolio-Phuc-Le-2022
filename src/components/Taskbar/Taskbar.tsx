@@ -21,7 +21,6 @@ const Taskbar = () => {
   const location = useLocation();
   const { pathname } = location;
   const selectedPageData = routes.find((route) => route.path === pathname);
-  console.log(pathname);
 
   const sringAnimation = {
     type: 'spring',

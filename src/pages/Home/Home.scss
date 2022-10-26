@@ -41,10 +41,18 @@
 
   @media (max-width: 992px) {
     .pf-desktop {
-      flex-direction: column;
+      top: 50%;
+      left: 50%;
+      display: grid;
+      transform: translateX(-50%) translateY(-50%) translateZ(0px);
 
       div {
         margin: 7px 0;
+
+        .pf-main-card {
+          width: 150px;
+          height: 150px;
+        }
       }
     }
   }

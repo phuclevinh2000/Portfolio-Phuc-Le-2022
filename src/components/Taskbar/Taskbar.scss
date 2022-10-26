@@ -90,3 +90,11 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .pf-bottom {
+    .pf-taskbar {
+      display: none;
+    }
+  }
+}
