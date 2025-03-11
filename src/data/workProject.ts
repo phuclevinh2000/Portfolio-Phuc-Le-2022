@@ -28,6 +28,30 @@ export const workAndProject: workAndProjectType = {
   careers: [
     {
       id: 1,
+      name: 'Zevoy Aktiebolag',
+      duration: 'Feb 2022 - current',
+      description:
+        'Zevoy is a fintech company. Zevoy Aktiebolag is a Finnish electronic money institution',
+      aboutMe: '',
+      mainTask: [
+        'Holding key responsible for update zevoy admin page and zevoy profile page',
+        'Implement core feature for the app using design from Figma',
+        'Optimize performace for the page when the company growth',
+      ],
+      techUsed: [
+        'React',
+        'Tailwind css',
+        'Go',
+        'GraphQL',
+        'TypeScript',
+        'AWS',
+        'GitHub',
+        'Storybook',
+        'Playwirght',
+      ],
+    },
+    {
+      id: 2,
       name: 'M-Files Oy',
       duration: 'Feb 2022 - current',
       description:
@@ -58,9 +82,9 @@ export const workAndProject: workAndProjectType = {
       ],
     },
     {
-      id: 2,
+      id: 30,
       name: 'Integrify Oy',
-      duration: 'June 2021 - current',
+      duration: 'June 2021 - Feb 2022',
       description:
         'Integrify is a software development company. Integrify offer recruitment, staffing, and IT - consulting services.',
       aboutMe:
