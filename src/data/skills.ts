@@ -100,6 +100,14 @@ export const skills: Skill[] = [
     category: 'Front-end',
   },
   {
+    code: 'tailwindcss',
+    name: 'Tailwind CSS',
+    label: 'Tailwind CSS',
+    url: 'https://tailwindcss.com/',
+    color: 'rgba(227, 79, 38, 0.08)',
+    category: 'Front-end',
+  },
+  {
     code: 'mongodb',
     name: 'MongoDB',
     label: 'MongoDB',
