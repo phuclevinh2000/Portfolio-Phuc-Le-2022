@@ -3,7 +3,7 @@ import './CVAndEmail.scss';
 const CVAndEmail = () => {
   return (
     <div className='pf-cvAndEmail'>
-      <a href='./assets/Phuc Le - CV.pdf' rel='noreferrer' target='_blank'>
+      <a href='./assets/Software developer 2025 Phuc Le.pdf' rel='noreferrer' target='_blank'>
         <img
           className='pf-cvAndEmail-icon'
           src={`./assets/icons/cv-icon.svg`}
